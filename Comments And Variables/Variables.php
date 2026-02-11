@@ -9,7 +9,7 @@
     // Example of Local Scope Variable
     function localScopeExample() {
         $localVariable = "I am a local variable.";
-        echo $localVariable; // This will work
+        echo $localVariable, "<br>"; // This will work
     } 
     localScopeExample(); // This will call the function and output the local variable
     /* echo $localVariable; // This will cause an error because $localVariable is not
@@ -22,7 +22,7 @@
 
     // Example of Global Scope Variable 
     $globalScopeExample = "I am a global variable.";
-    echo $globalScopeExample; // This will work
+    echo $globalScopeExample, "<br>"; // This will work
 
     // 3:
     /* Static Scope: A variable declared as static within a function retains its value
@@ -34,8 +34,16 @@
     function staticScopeExample() {
         static $staticVariable = 0;  // This variable will retain its value between function calls 
         $staticVariable++;
-        echo $staticVariable; // This will output the incremented value each time the function is called
+        echo $staticVariable, "<br>"; // This will output the incremented value each time the function is called
     }
     staticScopeExample(); // This will output 1 
     staticScopeExample(); // This will output 2
+
+    // To Verify the Type of a Variable or Object using var_dump() function
+    $var1 = "Hello, World!";
+    $var2 = 42;
+    $var3 = 3.14;
+    var_dump($var1, "<br>"); 
+    var_dump($var2, "<br>"); 
+    var_dump($var3, "<br>"); 
 ?>
