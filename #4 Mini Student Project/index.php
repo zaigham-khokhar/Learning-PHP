@@ -1,7 +1,7 @@
 <?php
     include "student.php"
 ?>
-
+ 
 <!DOCTYPE html>
 <html lang="en">
 <head>
