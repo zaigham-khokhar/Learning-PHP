@@ -23,7 +23,7 @@ This is a comprehensive PHP learning project designed to help beginners master P
 **Project Name:** PHP Learning Project  
 **Project Type:** Educational/Tutorial Code Repository  
 **Primary Language:** PHP  
-**Current Version:** 1.0.0  
+**Current Version:** 8.5.0  
 **Last Updated:** February 2026
 
 ---
