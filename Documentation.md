@@ -162,7 +162,7 @@ Learning php/
 │   │   └── DestructorMethod.php
 │   ├── #5 PHP OOP Access Modifiers/
 │   │   └── AccessModifiers.php
-│   └── #6 PHP OOP nheritence/
+│   └── #6 PHP OOP Inheritence/
 │
 ├── #4 Mini Student Project/     # Mini project
 │   ├── index.php
