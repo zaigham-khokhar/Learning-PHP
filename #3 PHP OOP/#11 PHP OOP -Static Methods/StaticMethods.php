@@ -1,0 +1,3 @@
+<?php
+    // PHP - Static Methods
+?>
