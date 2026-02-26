@@ -7,12 +7,8 @@
     must be public: */
     # Syntax:
     interface InterfaceName {
-        public function method1() {
-            // Code is Here
-        }
-        public function method2() {
-            // Code is Here
-        }
+        public function method1() 
+        public function method2()
     }
 
     /* The following example defines an interface named Animal, with one public method
