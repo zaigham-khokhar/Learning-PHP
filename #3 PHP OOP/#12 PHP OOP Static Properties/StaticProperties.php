@@ -14,4 +14,14 @@
     /* To access a static property, specify the class name, followed by a
     double colon (::) and the method name: */
     ClassName::$statProp;
+
+    /* In the following example, we declare a static property: $value.
+    Then, we echo the value of the static property directly by using the class name,
+    double colon (::), and the property name (without creating a class first): */
+    class pi {
+        // static property
+        public static $value = 3.12893;
+    }
+    // Get static property directly
+    echo pi::$value;
 ?>
