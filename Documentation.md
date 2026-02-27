@@ -60,7 +60,6 @@ Learning php/
 ├── README.md                     # Project readme
 │
 ├── #1 PHP Fundamentals/         # PHP basics and fundamentals
-│   ├── README.md
 │   ├── #1 PHP Comments And Variables/
 │   │   ├── Comments.php
 │   │   └── Variables.php
@@ -125,16 +124,18 @@ Learning php/
 │   │   ├── RemoveArrayItems&ArrayMethods.php
 │   │   ├── SortingArray.php
 │   │   └── ArrayFunctions.php
-│   └── #17 PHP Super Globals/
-│       ├── SuperGlobalsDetails.php
-│       ├── $GLOBALS.php
-│       ├── $_SERVER.php
-│       ├── $_GET.php
-│       ├── $_POST.php
-│       ├── $_REQUEST.php
-│       ├── Get.php
-│       ├── Post.php
-│       └── Request.php
+│   ├── #17 PHP Super Globals/
+│   │   ├── SuperGlobalsDetails.php
+│   │   ├── $GLOBALS.php
+│   │   ├── $_SERVER.php
+│   │   ├── $_GET.php
+│   │   ├── $_POST.php
+│   │   ├── $_REQUEST.php
+│   │   ├── Get.php
+│   │   ├── Post.php
+│   │   └── Request.php
+│   └── #18 RegEx & RegEx Functions/
+│       └── RegExDeatils&Syntax.php
 │
 ├── #2 PHP Form/                  # Form handling
 │   ├── #1 PHP Form Handling/
@@ -162,14 +163,40 @@ Learning php/
 │   │   └── DestructorMethod.php
 │   ├── #5 PHP OOP Access Modifiers/
 │   │   └── AccessModifiers.php
-│   └── #6 PHP OOP Inheritence/
+│   ├── #6 PHP OOP Inheritence/
+│   │   └── InheritenceRules.php
+│   ├── #7 PHP OOP Constants/
+│   │   └── ClassConstants.php
+│   ├── #8 PHP OOP Abstract Classes/
+│   │   ├── AbstractClasses&Methods.php
+│   │   └── AbstractMethodwithArgument.php
+│   ├── #9 PHP OOP InterFaces/
+│   │   ├── InterFaces.php
+│   │   └── InterFacesVsAbstractClasse.php
+│   ├── #10 PHP OOP Traits/
+│   │   ├── OOPTraits.php
+│   │   ├── TwoClassesInOneTrait.php
+│   │   └── UsingMultipleTraits.php
+│   ├── #11 PHP OOP Static Methods/
+│   │   ├── StaticMethods.php
+│   │   └── MoreOnStaticMethods.php
+│   ├── #12 PHP OOP Static Properties/
+│   │   ├── StaticProperties.php
+│   │   └── MoreOnStaticProperties.php
+│   ├── #13 PHP OOP NameSpaces/
+│   │   └── NameSpaces.php
+│   └── #14 PHP OOP Iterables/
+│       ├── Iterables.php
+│       └── CreatingIterables.php
 │
 ├── #4 Mini Student Project/     # Mini project
 │   ├── index.php
 │   └── student.php
 │
-└── RegEx & RegEx Functions/    # Regular expressions
-    └── RegExDeatils&Syntax.php
+└── #5 PHP TODO-LIST Mini Project/  # TODO List Mini Project
+    ├── index.php
+    ├── Todo.php
+    └── tasks.txt
 ```
 
 ---
@@ -322,6 +349,14 @@ Covers all 8 PHP data types:
 - Destructors
 - Access Modifiers
 - Inheritance
+- Class Constants
+- Abstract Classes
+- Interfaces
+- Traits
+- Static Methods
+- Static Properties
+- Namespaces
+- Iterables
 
 ---
 
@@ -388,16 +423,24 @@ This folder contains 5 subfolders with 8 files total covering form handling:
 
 ### #3 PHP OOP
 
-This folder contains 6 subfolders covering object-oriented programming:
+This folder contains 14 subfolders covering object-oriented programming:
 
-| Subfolder | Description |
-|-----------|-------------|
-| PHP OOP What is OOP | Introduction to OOP concepts |
-| PHP OOP Classes & Objects | Classes and object creation |
-| PHP OOP Constructor | Constructor methods |
-| PHP OOP Destructor | Destructor methods |
-| PHP OOP Access Modifiers | Public, private, protected |
-| PHP OOP nheritence | Inheritance (note: typo in folder name) |
+| Subfolder | Files | Description |
+|-----------|-------|-------------|
+| PHP OOP What is OOP | 1 | Introduction to OOP concepts |
+| PHP OOP Classes & Objects | 2 | Classes and object creation |
+| PHP OOP Constructor | 1 | Constructor methods |
+| PHP OOP Destructor | 1 | Destructor methods |
+| PHP OOP Access Modifiers | 1 | Public, private, protected |
+| PHP OOP Inheritence | 1 | Inheritance |
+| PHP OOP Constants | 1 | Class constants |
+| PHP OOP Abstract Classes | 2 | Abstract classes and methods |
+| PHP OOP InterFaces | 2 | Interfaces and vs abstract classes |
+| PHP OOP Traits | 3 | Traits and multiple trait usage |
+| PHP OOP Static Methods | 2 | Static methods |
+| PHP OOP Static Properties | 2 | Static properties |
+| PHP OOP NameSpaces | 1 | Namespaces |
+| PHP OOP Iterables | 2 | Iterables and creating iterables |
 
 #### Key Concepts Covered:
 
@@ -407,6 +450,21 @@ This folder contains 6 subfolders covering object-oriented programming:
 - **ConstructorMethod.php**: Constructor definition and usage
 - **DestructorMethod.php**: Destructor definition and usage
 - **AccessModifiers.php**: Public, private, protected access levels
+- **ClassConstants.php**: Class constants
+- **AbstractClasses&Methods.php**: Abstract classes and methods
+- **AbstractMethodwithArgument.php**: Abstract methods with arguments
+- **InterFaces.php**: Interface definitions
+- **InterFacesVsAbstractClasse.php**: Interfaces vs Abstract Classes
+- **OOPTraits.php**: Using traits in PHP
+- **TwoClassesInOneTrait.php**: Using two classes in one trait
+- **UsingMultipleTraits.php**: Using multiple traits
+- **StaticMethods.php**: Static method definitions
+- **MoreOnStaticMethods.php**: More on static methods
+- **StaticProperties.php**: Static property definitions
+- **MoreOnStaticProperties.php**: More on static properties
+- **NameSpaces.php**: Namespace usage in PHP
+- **Iterables.php**: Iterable type
+- **CreatingIterables.php**: Creating iterables
 
 ---
 
@@ -416,14 +474,31 @@ A practical mini project demonstrating CRUD operations with students:
 
 | File | Description |
 |------|-------------|
-| index.php | Main project file (3564 chars) - Student management interface |
-| student.php | Student class/model (549 chars) - Student entity definition |
+| index.php | Main project file - Student management interface |
+| student.php | Student class/model - Student entity definition |
 
 This mini project demonstrates:
 - Object-oriented programming in practice
 - Form handling for data entry
 - Basic CRUD operations
 - PHP class design
+
+---
+
+### #5 PHP TODO-LIST Mini Project
+
+A practical mini project for managing TODO tasks:
+
+| File | Description |
+|------|-------------|
+| index.php | Main TODO list interface |
+| Todo.php | TODO class/model |
+| tasks.txt | Tasks storage file |
+
+This mini project demonstrates:
+- File handling for data persistence
+- Basic CRUD operations on tasks
+- Simple task management
 
 ---
 
@@ -675,8 +750,8 @@ This PHP Learning Project provides a comprehensive educational resource for mast
 - **Super Globals**: Form handling, server variables
 - **Regular Expressions**: Pattern matching and validation
 - **Forms**: Form handling (GET/POST)
-- **OOP**: Object-oriented programming
-- **Mini Project**: Student management project
+- **OOP**: Object-oriented programming (Classes, Objects, Constructors, Destructors, Access Modifiers, Inheritance, Constants, Abstract Classes, Interfaces, Traits, Static Methods, Static Properties, Namespaces, Iterables)
+- **Mini Projects**: Student management project, TODO-List project
 
 ### Key Features
 
@@ -692,10 +767,12 @@ This PHP Learning Project provides a comprehensive educational resource for mast
 
 ### Current Status
 
-- **Total Folders**: 4 main + planned topics
-- **Completed Folders**: 4 (PHP Fundamentals, PHP Form, PHP OOP, Mini Student Project)
-- **Planned Folders**: 13
-- **Total Files**: 70+ files with comprehensive examples
+- **Total Folders**: 5 main sections (PHP Fundamentals with 18 topics, PHP Form with 5 topics, PHP OOP with 14 topics, Mini Projects)
+- **Completed Folders**: 5 (PHP Fundamentals, PHP Form, PHP OOP, Mini Student Project, TODO-List Mini Project)
+- **Total Files**: 130+ files with comprehensive examples
+- **PHP Fundamentals**: 18 topics covering all basic PHP concepts
+- **PHP Form**: 5 topics covering form handling
+- **PHP OOP**: 14 topics covering object-oriented programming
 
 ### Getting Started
 

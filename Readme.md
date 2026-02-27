@@ -90,7 +90,7 @@ Learning php/
 │   ├── #10 PHP Operators/
 │   │   ├── ArithmethicOperator.php         # +, -, *, /, %, **
 │   │   ├── ArrayOperator.php               # Array operators
-│   │   ├── AssignmentOperator.php          # =, +=, -=, *=, /=, .=
+│   │   ├── AssignmentOperator.php          # =, +=, -=, *=, /=, .=, %=
 │   │   ├── ComparisonOperator.php           # ==, ===, !=, <>, !==
 │   │   ├── ConditionalOperator.php          # ?:, ??
 │   │   ├── Increment&DecrementOperators.php # ++, --
@@ -109,7 +109,7 @@ Learning php/
 │   │   ├── ForLoop.php                      # For loop
 │   │   ├── WhileLoop.php                    # While loop
 │   │   ├── DoWhileLoop.php                  # Do-while loop
-│   │   ├── ForEachLoop.php                   # Foreach loop
+│   │   ├── ForEachLoop.php                  # Foreach loop
 │   │   ├── BreakStatement.php               # Break statement
 │   │   └── ContinueStatement.php            # Continue statement
 │   ├── #15 PHP Functions/
@@ -125,24 +125,26 @@ Learning php/
 │   │   ├── RemoveArrayItems&ArrayMethods.php # Removing array items
 │   │   ├── SortingArray.php                 # Sorting arrays
 │   │   └── ArrayFunctions.php               # Array functions
-│   └── #17 PHP Super Globals/
-│       ├── SuperGlobalsDetails.php          # Super globals overview
-│       ├── $GLOBALS.php                      # Global variable access
-│       ├── $_SERVER.php                      # Server information
-│       ├── $_GET.php                         # GET parameters
-│       ├── $_POST.php                        # POST parameters
-│       ├── $_REQUEST.php                    # Request variables
-│       ├── Get.php                           # GET method example
-│       ├── Post.php                          # POST method example
-│       └── Request.php                       # Request example
+│   ├── #17 PHP Super Globals/
+│   │   ├── SuperGlobalsDetails.php          # Super globals overview
+│   │   ├── $GLOBALS.php                     # Global variable access
+│   │   ├── $_SERVER.php                     # Server information
+│   │   ├── $_GET.php                        # GET parameters
+│   │   ├── $_POST.php                       # POST parameters
+│   │   ├── $_REQUEST.php                    # Request variables
+│   │   ├── Get.php                          # GET method example
+│   │   ├── Post.php                         # POST method example
+│   │   └── Request.php                      # Request example
+│   └── #18 RegEx & RegEx Functions/
+│       └── RegExDeatils&Syntax.php          # Regular expressions
 │
 ├── #2 PHP Form/                             # Form handling (5 sections)
 │   ├── #1 PHP Form Handling/
 │   │   ├── FormHandling.php                 # Basic form handling
 │   │   ├── welcome_get.php                  # GET form example
-│   │   └── welcome.php                       # Form welcome page
+│   │   └── welcome.php                      # Form welcome page
 │   ├── #2 PHP Form Validation/
-│   │   └── FormValidation.php               # Server-side validation
+│   │   └── FormValidation.php                # Server-side validation
 │   ├── #3 PHP Form Required/
 │   │   └── FormRequired.php                 # Required field validation
 │   ├── #4 PHP Form URL & E-mail/
@@ -150,27 +152,55 @@ Learning php/
 │   └── #5 PHP Form Complete/
 │       └── FormComplete.php                 # Complete form example
 │
-├── #3 PHP OOP/                              # Object-oriented programming (6 sections)
+├── #3 PHP OOP/                              # Object-oriented programming (14 sections)
 │   ├── #1 PHP OOP What is OOP/
-│   │   └── WhatisOOP.php                     # Introduction to OOP
+│   │   └── WhatisOOP.php                    # Introduction to OOP
 │   ├── #2 PHP OOP Classes & Objects/
-│   │   ├── Classes.php                       # Class definitions
-│   │   └── Objects.php                       # Object creation and usage
+│   │   ├── Classes.php                      # Class definitions
+│   │   └── Objects.php                     # Object creation and usage
 │   ├── #3 PHP OOP Constructor/
-│   │   └── ConstructorMethod.php             # Constructor
+│   │   └── ConstructorMethod.php            # Constructor
 │   ├── #4 PHP OOP Destructor/
 │   │   └── DestructorMethod.php              # Destructor
 │   ├── #5 PHP OOP Access Modifiers/
-│   │   └── AccessModifiers.php               # Public, Private, Protected
-│   └── #6 PHP OOP Inheritence/
-│       └── InheritenceRules.php              # Inheritance
+│   │   └── AccessModifiers.php              # Public, Private, Protected
+│   ├── #6 PHP OOP Inheritence/
+│   │   └── InheritenceRules.php             # Inheritance
+│   ├── #7 PHP OOP Constants/
+│   │   └── ClassConstants.php               # Class constants
+│   ├── #8 PHP OOP Abstract Classes/
+│   │   ├── AbstractClasses&Methods.php      # Abstract classes
+│   │   └── AbstractMethodwithArgument.php   # Abstract methods with arguments
+│   ├── #9 PHP OOP InterFaces/
+│   │   ├── InterFaces.php                   # Interfaces
+│   │   └── InterFacesVsAbstractClasse.php   # Interfaces vs Abstract Classes
+│   ├── #10 PHP OOP Traits/
+│   │   ├── OOPTraits.php                    # Traits
+│   │   ├── TwoClassesInOneTrait.php         # Two classes in one trait
+│   │   └── UsingMultipleTraits.php          # Using multiple traits
+│   ├── #11 PHP OOP Static Methods/
+│   │   ├── StaticMethods.php                # Static methods
+│   │   └── MoreOnStaticMethods.php         # More on static methods
+│   ├── #12 PHP OOP Static Properties/
+│   │   ├── StaticProperties.php             # Static properties
+│   │   └── MoreOnStaticProperties.php       # More on static properties
+│   ├── #13 PHP OOP NameSpaces/
+│   │   └── NameSpaces.php                   # Namespaces
+│   └── #14 PHP OOP Iterables/
+│       ├── Iterables.php                    # Iterables
+│       └── CreatingIterables.php            # Creating iterables
 │
 ├── #4 Mini Student Project/                 # Mini project
-│   ├── index.php                             # Main student management page
+│   ├── index.php                            # Main student management page
 │   └── student.php                           # Student class
 │
-├── Documentation.md                          # Detailed documentation
-└── Readme.md                                 # This file
+├── #5 PHP TODO-LIST Mini Project/           # TODO List Mini Project
+│   ├── index.php                            # Main TODO list interface
+│   ├── Todo.php                             # TODO class
+│   └── tasks.txt                            # Tasks storage
+│
+├── Documentation.md                         # Detailed documentation
+└── Readme.md                                # This file
 ```
 
 ---
@@ -271,11 +301,13 @@ PHP supports 8 data types:
 - Constructors and Destructors
 - Access Modifiers (Public, Private, Protected)
 - Inheritance
+- Class Constants
 - Abstract Classes
 - Interfaces
 - Traits
 - Static methods and properties
-- Constants
+- Namespaces
+- Iterables
 
 ---
 
@@ -376,14 +408,21 @@ Master OOP concepts in PHP:
 4. Destructor
 5. Access Modifiers
 6. Inheritance
-7. Abstract Classes
-8. Interfaces
+7. Class Constants
+8. Abstract Classes
+9. Interfaces
+10. Traits
+11. Static Methods
+12. Static Properties
+13. Namespaces
+14. Iterables
 
 ### Path 4: Practical Application
 
-Apply your knowledge with the Mini Student Project:
+Apply your knowledge with the Mini Projects:
 
-- Student Management System with CRUD operations
+1. Student Management System with CRUD operations
+2. TODO-List Application with file handling
 
 ---
 
