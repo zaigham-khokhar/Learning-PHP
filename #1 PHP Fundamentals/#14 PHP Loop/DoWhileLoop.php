@@ -12,5 +12,5 @@
     do{
         echo $i . "\n <br>";
         $i++;
-    } while ($i <= 50);
+    } while ($i <= 10);
 ?>
