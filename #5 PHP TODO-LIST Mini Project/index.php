@@ -1,32 +1,34 @@
 <?php
-session_start();
 require "Todo.php";
 
 $todo = new Todo();
 
-// Add Task Condition
-if (isset($_POST["task"]) && !isset( $_POST["edit_index"])) {
+// Add Task
+if (isset($_POST["task"]) && !isset($_POST["edit_index"])) {
     $todo->addTask($_POST["task"]);
 }
 
-// Delete Task Condition
-if (isset($_GET["delete"])) {
-    $todo->deleteTask($_GET["delete"]);
-}
-
-// Update Task Condition
+// Update Task
 if (isset($_POST["edit_index"])) {
     $todo->editTask($_POST["edit_index"], $_POST["task"]);
 }
 
+// Delete Task
+if (isset($_GET["delete"])) {
+    $todo->deleteTask($_GET["delete"]);
+}
+
+// Get all tasks
 $tasks = $todo->getTasks();
 
-// Edit Task Condition
+// Edit Task info
 $editTask = "";
 $editIndex = null;
 if (isset($_GET["edit"])) {
     $editIndex = $_GET["edit"];
-    $editTask = $tasks[$editIndex];
+    if (isset($tasks[$editIndex])) {
+        $editTask = $tasks[$editIndex];
+    }
 }
 ?>
 
@@ -40,22 +42,23 @@ if (isset($_GET["edit"])) {
 <body>
     <h2>Todo List</h2>
     <form method="POST">
-        <input type="text" name="task" id="Task-Input" placeholder="Enter Task" required>
+        <input type="text" name="task" id="Task-Input" placeholder="Enter Task" required value="<?php echo $editTask; ?>">
         <?php if($editIndex !== null){ ?>
             <input type="hidden" name="edit_index" value="<?php echo $editIndex; ?>">
             <button>Update</button>
         <?php } else { ?>
-        <button>Add</button>
+            <button>Add</button>
         <?php } ?>
     </form>
     <ul>
         <?php foreach($tasks as $index => $task){ ?>
             <li>
                 <?php echo $task; ?>
-                <a href="?edit<?php echo $index; ?>">Edit</a>
-                <a href="?delete<?php echo $index; ?>">Delete</a>
+                <!-- ✅ Fix: Added = sign -->
+                <a href="?edit=<?php echo $index; ?>">Edit</a>
+                <a href="?delete=<?php echo $index; ?>">Delete</a>
             </li>
-    <?php } ?>
+        <?php } ?>
     </ul>
 </body>
 </html>

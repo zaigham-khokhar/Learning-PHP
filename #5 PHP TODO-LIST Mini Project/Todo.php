@@ -1,6 +1,7 @@
 <?php
     // Make a Class Names Todo
     class Todo {
+        session_start();
         public function __construct() {
             if(isset($_SESSION["tasks"])) {
                 $_SESSION["tasks"] = [];
