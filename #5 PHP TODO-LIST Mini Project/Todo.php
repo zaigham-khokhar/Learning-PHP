@@ -11,7 +11,10 @@ class Todo {
 
     // Add a task
     public function addTask($task) {
-        $_SESSION['tasks'][] = $task;
+        $task = trim($task);
+        if (!empty($task) && strlen($task) <= 500) {
+            $_SESSION['tasks'][] = $task;
+        }
     }
 
     // Get all tasks
@@ -22,7 +25,10 @@ class Todo {
     // Edit a task
     public function editTask($index, $task) {
         if (isset($_SESSION['tasks'][$index])) {
-            $_SESSION['tasks'][$index] = $task;
+            $task = trim($task);
+            if (!empty($task) && strlen($task) <= 500) {
+                $_SESSION['tasks'][$index] = $task;
+            }
         }
     }
 
@@ -30,7 +36,7 @@ class Todo {
     public function deleteTask($index) {
         if (isset($_SESSION['tasks'][$index])) {
             unset($_SESSION['tasks'][$index]);
-            $_SESSION['tasks'] = array_values($_SESSION['tasks']); // reindex
+            $_SESSION['tasks'] = array_values($_SESSION['tasks']); 
         }
     }
 }

@@ -6,11 +6,15 @@ $todo = new Todo();
 // Add Task
 if (isset($_POST["task"]) && !isset($_POST["edit_index"])) {
     $todo->addTask($_POST["task"]);
+    header("Location: " . str_replace("?" . $_SERVER['QUERY_STRING'], '', $_SERVER['REQUEST_URI']));
+    exit;
 }
 
 // Update Task
 if (isset($_POST["edit_index"])) {
     $todo->editTask($_POST["edit_index"], $_POST["task"]);
+    header("Location: " . str_replace("?" . $_SERVER['QUERY_STRING'], '', $_SERVER['REQUEST_URI']));
+    exit;
 }
 
 // Delete Task
@@ -51,7 +55,7 @@ $taskCount = count($tasks);
         <div class="form-container">
             <form method="POST">
                 <div class="input-wrapper">
-                    <input type="text" name="task" id="Task-Input" placeholder="Enter your task here..." required value="<?php echo $editTask; ?>">
+                    <input type="text" name="task" id="Task-Input" placeholder="Enter your task here..." required value="<?php echo htmlspecialchars($editTask, ENT_QUOTES, 'UTF-8'); ?>">
                 </div>
                 <?php if($editIndex !== null){ ?>
                     <input type="hidden" name="edit_index" value="<?php echo $editIndex; ?>">
@@ -83,8 +87,8 @@ $taskCount = count($tasks);
                                 <?php echo htmlspecialchars($task); ?>
                             </span>
                             <div class="action-buttons">
-                                <a href="?edit=<?php echo $index; ?>" class="action-btn edit-btn">Edit</a>
-                                <a href="?delete=<?php echo $index; ?>" class="action-btn delete-btn">Delete</a>
+                                <a href="?edit=<?php echo urlencode($index); ?>" class="action-btn edit-btn">Edit</a>
+                                <a href="?delete=<?php echo urlencode($index); ?>" class="action-btn delete-btn">Delete</a>
                             </div>
                         </li>
                     <?php } ?>
