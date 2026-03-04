@@ -24,7 +24,7 @@ This is a comprehensive PHP learning project designed to help beginners master P
 **Project Type:** Educational/Tutorial Code Repository  
 **Primary Language:** PHP  
 **Current Version:** 8.5.0  
-**Last Updated:** February 2026
+**Last Updated:** March 2026
 
 ---
 
@@ -196,7 +196,7 @@ Learning php/
 └── #5 PHP TODO-LIST Mini Project/  # TODO List Mini Project
     ├── index.php
     ├── Todo.php
-    └── tasks.txt
+    └── style.css
 ```
 
 ---
@@ -493,7 +493,7 @@ A practical mini project for managing TODO tasks:
 |------|-------------|
 | index.php | Main TODO list interface |
 | Todo.php | TODO class/model |
-| tasks.txt | Tasks storage file |
+| style.css | Styling for the TODO list interface |
 
 This mini project demonstrates:
 - File handling for data persistence

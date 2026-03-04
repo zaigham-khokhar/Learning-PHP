@@ -42,7 +42,7 @@ This project provides a structured learning approach with:
 | **Project Type** | Educational/Tutorial Code Repository |
 | **Primary Language** | PHP |
 | **Current Version** | 8.5.0 |
-| **Last Updated** | February 2026 |
+| **Last Updated** | March 2026 |
 | **Target Audience** | Beginners to Intermediate PHP Developers |
 
 ### Project Goals
@@ -197,7 +197,7 @@ Learning php/
 ├── #5 PHP TODO-LIST Mini Project/           # TODO List Mini Project
 │   ├── index.php                            # Main TODO list interface
 │   ├── Todo.php                             # TODO class
-│   └── tasks.txt                            # Tasks storage
+│   └── style.css                            # Styling for TODO list
 │
 ├── Documentation.md                         # Detailed documentation
 └── Readme.md                                # This file
