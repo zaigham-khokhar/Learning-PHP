@@ -4,7 +4,7 @@ session_start();
 class Todo {
 
     public function __construct() {
-        if (!isset($_SESSION['tasks'])) {
+        if (!isset($_SESSION['tasks'])) { 
             $_SESSION['tasks'] = [];
         }
     }
