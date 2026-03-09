@@ -36,8 +36,6 @@ class Todo {
 
 $todo = new Todo();
 
-/* ---------- Logic ---------- */
-
 if(isset($_POST['task']) && !isset($_POST['edit_index'])){
     $todo->addTask($_POST['task']);
     header("Location: index.php?msg=added");
