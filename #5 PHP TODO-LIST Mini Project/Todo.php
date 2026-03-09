@@ -1,58 +1,59 @@
 <?php
-// Start session to store tasks
 session_start();
 
 class Todo {
 
-    // Constructor - runs when class is created
-    public function __construct() {
-        // Create tasks array if not exists
-        if (!isset($_SESSION['tasks'])) { 
+    public function __construct(){
+        if(!isset($_SESSION['tasks'])){
             $_SESSION['tasks'] = [];
         }
     }
 
-    // Add a new task
-    public function addTask($task) {
-        // Remove extra spaces
+    public function addTask($task){
         $task = trim($task);
-        
-        // Check if task is not empty and not too long
-        if (!empty($task) && strlen($task) <= 500) {
-            // Add to session
+        if(!empty($task)){
             $_SESSION['tasks'][] = $task;
         }
     }
 
-    // Get all tasks
-    public function getTasks() {
+    public function getTasks(){
         return $_SESSION['tasks'];
     }
 
-    // Edit a task
-    public function editTask($index, $task) {
-        // Check if task exists
-        if (isset($_SESSION['tasks'][$index])) {
-            // Remove extra spaces
-            $task = trim($task);
-            
-            // Check if task is not empty and not too long
-            if (!empty($task) && strlen($task) <= 500) {
-                // Update the task
-                $_SESSION['tasks'][$index] = $task;
-            }
+    public function editTask($index,$task){
+        if(isset($_SESSION['tasks'][$index])){
+            $_SESSION['tasks'][$index] = trim($task);
         }
     }
 
-    // Delete a task
-    public function deleteTask($index) {
-        // Check if task exists
-        if (isset($_SESSION['tasks'][$index])) {
-            // Remove the task
+    public function deleteTask($index){
+        if(isset($_SESSION['tasks'][$index])){
             unset($_SESSION['tasks'][$index]);
-            // Re-index array
-            $_SESSION['tasks'] = array_values($_SESSION['tasks']); 
+            $_SESSION['tasks'] = array_values($_SESSION['tasks']);
         }
     }
 }
-?>
+
+$todo = new Todo();
+
+/* ---------- Logic ---------- */
+
+if(isset($_POST['task']) && !isset($_POST['edit_index'])){
+    $todo->addTask($_POST['task']);
+    header("Location: index.php?msg=added");
+    exit;
+}
+
+if(isset($_POST['edit_index'])){
+    $todo->editTask($_POST['edit_index'],$_POST['task']);
+    header("Location: index.php?msg=updated");
+    exit;
+}
+
+if(isset($_GET['delete'])){
+    $todo->deleteTask($_GET['delete']);
+    header("Location: index.php?msg=deleted");
+    exit;
+}
+
+$tasks = $todo->getTasks();
