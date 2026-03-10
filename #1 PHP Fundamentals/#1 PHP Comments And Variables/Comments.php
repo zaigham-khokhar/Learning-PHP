@@ -12,6 +12,6 @@
     // 3:
     /*This is a multi-line comment
     that spans muliple lines
-    */
+    */ 
 
 ?>
